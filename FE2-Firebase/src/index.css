@@ -1,0 +1,311 @@
+/* Global reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100%;
+  font-family: "Poppins", sans-serif;
+  background-color: #121826; /* deep navy background */
+  color: #e0f2f1;
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  background-color: #1f2937;
+  color: #93c5fd;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border-bottom: 1px solid #374151;
+}
+
+/* Footer */
+.footer {
+  background-color: #1f2937;
+  color: #38bdf8;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  border-top: 1px solid #374151;
+  width: 100%;
+  margin-top: auto;
+}
+
+
+/* Nav */
+nav {
+  background-color: #1e293b;
+  color: #fff;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+nav a:hover {
+  background-color: #334155;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* Cards (e.g., Add Task) */
+.card {
+  background-color: #1e293b;
+  color: #f1f5f9;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-display {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* General button */
+.btn {
+  background: linear-gradient(to right, #3b82f6, #06b6d4);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #2563eb, #0891b2);
+}
+
+/* Edit/Delete Icons */
+.edit, .delete {
+  background: none;
+  border: none;
+  color: #60a5fa;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+}
+
+.edit {
+  right: 60px;
+}
+
+.delete {
+  right: 20px;
+}
+
+/* Input Box for Add Task */
+.inputBox {
+  padding: 48px;
+}
+
+.input_row {
+  padding-bottom: 24px;
+}
+
+/* Form Inputs (shared across login/profile/task) */
+.input,
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #e5e7eb;
+  background: transparent;
+  font-size: 1rem;
+  color: #f8fafc;
+  padding: 12px 0;
+  margin-bottom: 20px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus,
+input:focus {
+  border-bottom: 2px solid #0ea5e9;
+}
+
+/* Labels */
+.label,
+label {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.error {
+  color: #f87171;
+  font-weight: 600;
+}
+
+/* Active nav */
+.active {
+  color: white;
+}
+
+/* LOGIN & PROFILE FORM STYLING */
+.loginForm {
+  background-color: #1e293b; /* dark background */
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 500px;
+  margin: 80px auto;
+  color: #f1f5f9; /* light text */
+}
+
+
+#headerTitle {
+  text-align: center;
+  font-family: 'open sans', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* Form Row Container */
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  max-width: 100%;
+}
+
+.row input {
+  width: 80%;
+  font-size: 1.1rem;
+  padding-left: 1rem;
+  padding-bottom: 0.8rem;
+  border: none;
+  border-bottom: 2px solid #334155;
+  background: transparent;
+  color: #f8fafc;
+  transition: border-color 0.2s ease-in;
+}
+
+.row input:focus {
+  border-bottom-color: #0ea5e9;
+  outline: none;
+}
+
+
+.row label {
+  align-self: start;
+  padding-left: 2.5rem;
+  padding-bottom: 0.5rem;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+
+/* Gradient button used in login/profile */
+.row button,
+.loginForm button {
+  background: linear-gradient(to right, #1d4ed8, #0ea5e9);
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 0;
+  width: 80%;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.row button:hover,
+.loginForm button:hover {
+  box-shadow: 0 0 10px #0ea5e980;
+  opacity: 0.95;
+}
+
+
+/* Icons for social logins */
+#facebookIcon, #gitIcon, #googleIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.iconGroup {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem 0;
+}
+
+.iconGroup a {
+  margin: 0 0.6rem;
+}
+
+.alternativeLogin {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.registerLink {
+  text-align: center;
+  margin-top: 1.2rem;
+}
+
+.registerLink a {
+  color: #3b82f6;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.forgotPasswordLink {
+  cursor: pointer;
+  color: #f97316;
+  font-weight: 600;
+  text-align: right;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  width: 40%;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid #38bdf8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
